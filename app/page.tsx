@@ -48,6 +48,14 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+
+        <div>
+          <p>
+        <Link href="/geo-test" style={{ color: "blue", textDecoration: "underline" }}>
+          Click here to test the Edge Function Redirect</Link>
+          </p>
+        </div>
+
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
