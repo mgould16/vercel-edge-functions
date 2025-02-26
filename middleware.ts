@@ -2,7 +2,9 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function middleware(req: NextRequest) {
-  const country = req.geo?.country || "Unknown";
+  // ✅ Ensure the geolocation headers are used
+  const country = req.headers.get("x-vercel-ip-country") || "Unknown";
+
   console.log(`Visitor Country: ${country}`);
 
   if (country === "GB") {
